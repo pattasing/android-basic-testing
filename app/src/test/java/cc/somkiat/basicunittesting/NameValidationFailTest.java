@@ -47,6 +47,14 @@ public class NameValidationFailTest {
         assertEquals("Name not in length", stringResult);
     }
 
-    
+    @Test
+    public void nameHaveNumber(){
+        NameValidation nameValidation = new NameValidation();
+        String name = "Ngit utty123";
+        boolean result = nameValidation.isNameValidation(name).getValidation();
+        String stringResult = nameValidation.isNameValidation(name).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Name is not pattern", stringResult);
+    }
 
 }
