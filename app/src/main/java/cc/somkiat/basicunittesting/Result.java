@@ -1,9 +1,5 @@
 package cc.somkiat.basicunittesting;
 
-/**
- * Created by patta on 14/11/2560.
- */
-
 public class Result {
     private boolean validation;
     private String stringValidation;

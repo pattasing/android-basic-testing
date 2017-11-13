@@ -9,7 +9,6 @@ import cc.somkiat.basicunittesting.TestException.NameIsNotPattern;
 import cc.somkiat.basicunittesting.TestException.NameNotInLength;
 
 class NameValidation {
-    private String nameValidationText;
     Context context;
 
     public NameValidation() {
@@ -18,34 +17,6 @@ class NameValidation {
     public NameValidation(Context context) {
         this.context = context;
     }
-
-//    public boolean isNull(String name) {
-//        IsTextNullException isTextNullException = new IsTextNullException();
-//        try {
-//            isTextNullException.checkText(name);
-//        }
-//        catch (IsTextNullException e) {
-//            Toast.makeText(context, "Name is null", Toast.LENGTH_LONG).show();
-//            return true;
-//        }
-////        Toast.makeText(context, "Save success", Toast.LENGTH_LONG).show();
-//        return false;
-//    }
-//
-//    public boolean isEmpty(String name) {
-//        IsTextEmptyException isTextEmptyException = new IsTextEmptyException();
-//        try {
-//            isTextEmptyException.checkText(name);
-//        }
-//        catch (IsTextEmptyException e) {
-//            Toast.makeText(context, "Name is empty", Toast.LENGTH_LONG).show();
-//            System.out.println("name: " + name);
-//            System.out.println("eiei");
-//            return true;
-//        }
-//        System.out.println("jiji");
-//        return false;
-//    }
 
     public Result isNameValidation (String name){
         IsTextNullException isTextNullException = new IsTextNullException();
