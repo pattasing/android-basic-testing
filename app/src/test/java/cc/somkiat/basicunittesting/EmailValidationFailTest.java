@@ -17,4 +17,14 @@ public class EmailValidationFailTest {
         assertEquals("Email is null", stringResult);
     }
 
+    @Test
+    public void emailIsEmpty(){
+        EmailValidation emailValidation = new EmailValidation();
+        String email = "";
+        boolean result = emailValidation.isEmailValidation(email).getValidation();
+        String stringResult = emailValidation.isEmailValidation(email).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Email is empty", stringResult);
+    }
+
 }
