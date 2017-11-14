@@ -17,4 +17,14 @@ public class NameValidationPassTest {
         assertEquals("Name Validation Success", stringResult);
     }
 
+    @Test
+    public void nameInLength(){
+        NameValidation nameValidation = new NameValidation();
+        String name = "po";
+        boolean result = nameValidation.isNameValidation(name).getValidation();
+        String stringResult = nameValidation.isNameValidation(name).getStringValidation();
+        assertFalse ("ต้องผ่าน", result);
+        assertEquals("Name Validation Success", stringResult);
+    }
+
 }
