@@ -31,14 +31,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO
         String name = editName.getText().toString();
         String email = editEmail.getText().toString();
-
-        if(nameValidation.isNameValidation(name).getValidation() == false && emailValidation.isEmailValidation(email).getValidation() == false){
-            Toast.makeText(this, "Save success", Toast.LENGTH_LONG).show();
-        }
-        else {
-            Toast.makeText(this, nameValidation.isNameValidation(name).getStringValidation() + " and " + emailValidation.isEmailValidation(email).getStringValidation(), Toast.LENGTH_LONG).show();
-//            Toast.makeText(this, emailValidation.isEmailValidation(email).getStringValidation(), Toast.LENGTH_LONG).show();
-        }
+        Toast.makeText(this, nameValidation.isNameValidation(name).getStringValidation() + " and " + emailValidation.isEmailValidation(email).getStringValidation(), Toast.LENGTH_LONG).show();
     }
 
     public void onRevertClick(View view) {

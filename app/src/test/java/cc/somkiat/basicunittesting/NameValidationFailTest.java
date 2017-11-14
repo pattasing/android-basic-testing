@@ -50,7 +50,27 @@ public class NameValidationFailTest {
     @Test
     public void nameHaveNumber(){
         NameValidation nameValidation = new NameValidation();
-        String name = "Ngit utty123";
+        String name = "Nutty123";
+        boolean result = nameValidation.isNameValidation(name).getValidation();
+        String stringResult = nameValidation.isNameValidation(name).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Name is not pattern", stringResult);
+    }
+
+    @Test
+    public void nameHaveSymbol(){
+        NameValidation nameValidation = new NameValidation();
+        String name = "Nutty@#";
+        boolean result = nameValidation.isNameValidation(name).getValidation();
+        String stringResult = nameValidation.isNameValidation(name).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Name is not pattern", stringResult);
+    }
+
+    @Test
+    public void nameHaveNumberAndSymbol(){
+        NameValidation nameValidation = new NameValidation();
+        String name = "N3utty1@#";
         boolean result = nameValidation.isNameValidation(name).getValidation();
         String stringResult = nameValidation.isNameValidation(name).getStringValidation();
         assertTrue("ต้องไม่ผ่าน", result);
