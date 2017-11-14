@@ -1,0 +1,20 @@
+package cc.somkiat.basicunittesting;
+
+import org.junit.Test;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
+
+public class EmailValidationFailTest {
+
+    @Test
+    public void emailIsNull(){
+        EmailValidation emailValidation = new EmailValidation();
+        String email = null;
+        boolean result = emailValidation.isEmailValidation(email).getValidation();
+        String stringResult = emailValidation.isEmailValidation(email).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Email is null", stringResult);
+    }
+
+}
