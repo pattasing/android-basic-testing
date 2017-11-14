@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     EditText editEmail;
     NameValidation nameValidation;
     EmailValidation emailValidation;
-    Result result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         editName = findViewById(R.id.userNameInput);
         editEmail = findViewById(R.id.emailInput);
-//        name = editName.getText().toString();
 
         nameValidation = new NameValidation(this);
         emailValidation = new EmailValidation(this);
@@ -31,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
         //TODO
         String name = editName.getText().toString();
         String email = editEmail.getText().toString();
-        Toast.makeText(this, nameValidation.isNameValidation(name).getStringValidation() + " and " + emailValidation.isEmailValidation(email).getStringValidation(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, nameValidation.isNameValidation(name).getStringValidation()
+                + " and " + emailValidation.isEmailValidation(email).getStringValidation(),
+                Toast.LENGTH_LONG).show();
     }
 
     public void onRevertClick(View view) {
