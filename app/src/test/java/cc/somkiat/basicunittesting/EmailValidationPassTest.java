@@ -16,5 +16,13 @@ public class EmailValidationPassTest {
         assertEquals("Email Validation Success", stringResult);
     }
 
-    
+    @Test
+    public void emailDotCoDotTh(){
+        EmailValidation emailValidation = new EmailValidation();
+        String email = "popo@koko.co.th";
+        boolean result = emailValidation.isEmailValidation(email).getValidation();
+        String stringResult = emailValidation.isEmailValidation(email).getStringValidation();
+        assertFalse ("ต้องผ่าน", result);
+        assertEquals("Email Validation Success", stringResult);
+    }
 }
