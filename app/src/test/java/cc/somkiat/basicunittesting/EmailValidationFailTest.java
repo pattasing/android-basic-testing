@@ -27,4 +27,14 @@ public class EmailValidationFailTest {
         assertEquals("Email is empty", stringResult);
     }
 
+    @Test
+    public void emailHaveSpecialSymbol(){
+        EmailValidation emailValidation = new EmailValidation();
+        String email = "Toto=!@yoyo.com";
+        boolean result = emailValidation.isEmailValidation(email).getValidation();
+        String stringResult = emailValidation.isEmailValidation(email).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Email is not pattern", stringResult);
+    }
+
 }
