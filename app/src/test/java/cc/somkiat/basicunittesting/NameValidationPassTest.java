@@ -18,9 +18,19 @@ public class NameValidationPassTest {
     }
 
     @Test
-    public void nameInLength(){
+    public void nameInLengthEdgeLow(){
         NameValidation nameValidation = new NameValidation();
         String name = "po";
+        boolean result = nameValidation.isNameValidation(name).getValidation();
+        String stringResult = nameValidation.isNameValidation(name).getStringValidation();
+        assertFalse ("ต้องผ่าน", result);
+        assertEquals("Name Validation Success", stringResult);
+    }
+
+    @Test
+    public void nameInLengthEdgeHigh(){
+        NameValidation nameValidation = new NameValidation();
+        String name = "popo kuroijihishikai";
         boolean result = nameValidation.isNameValidation(name).getValidation();
         String stringResult = nameValidation.isNameValidation(name).getStringValidation();
         assertFalse ("ต้องผ่าน", result);
