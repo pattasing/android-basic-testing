@@ -7,13 +7,8 @@ import cc.somkiat.basicunittesting.TestException.NameIsNotPattern;
 import cc.somkiat.basicunittesting.TestException.NameNotInLength;
 
 class NameValidation {
-    Context context;
 
     public NameValidation() {
-    }
-
-    public NameValidation(Context context) {
-        this.context = context;
     }
 
     public Result isNameValidation (String name){

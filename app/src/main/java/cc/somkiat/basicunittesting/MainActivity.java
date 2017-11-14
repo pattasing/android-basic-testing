@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         editName = findViewById(R.id.userNameInput);
         editEmail = findViewById(R.id.emailInput);
 
-        nameValidation = new NameValidation(this);
-        emailValidation = new EmailValidation(this);
+        nameValidation = new NameValidation();
+        emailValidation = new EmailValidation();
     }
 
     public void onSaveClick(View view) {

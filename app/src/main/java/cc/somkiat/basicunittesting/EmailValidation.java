@@ -8,12 +8,7 @@ import cc.somkiat.basicunittesting.TestException.IsTextNullException;
 
 public class EmailValidation {
 
-    Context context;
-
     public EmailValidation() {
-    }
-    public EmailValidation(Context context) {
-        this.context = context;
     }
 
 
