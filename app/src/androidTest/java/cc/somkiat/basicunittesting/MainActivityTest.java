@@ -50,8 +50,8 @@ public class MainActivityTest {
 
     @Test
     public void testNameAndEmailSaveAndRevert() {
-        onView(withId(R.id.userNameInput)).perform(replaceText(""), closeSoftKeyboard());
-        onView(withId(R.id.emailInput)).perform(replaceText(""), closeSoftKeyboard());
+        onView(withId(R.id.userNameInput)).perform(replaceText("PattaSing"), closeSoftKeyboard());
+        onView(withId(R.id.emailInput)).perform(replaceText("PattaSing@gmail.com"), closeSoftKeyboard());
         onView(allOf(withId(R.id.saveButton), withText("Save"))).perform(click());
         onView(allOf(withId(R.id.revertButton), withText("Revert"))).perform(click());
         onView(withId(R.id.userNameInput)).check(matches(withText("")));
