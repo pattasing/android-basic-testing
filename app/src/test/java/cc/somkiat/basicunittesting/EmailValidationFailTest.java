@@ -37,4 +37,14 @@ public class EmailValidationFailTest {
         assertEquals("Email is not pattern", stringResult);
     }
 
+    @Test
+    public void emailNotAddSymbol(){
+        EmailValidation emailValidation = new EmailValidation();
+        String email = "Totoyoyo.com";
+        boolean result = emailValidation.isEmailValidation(email).getValidation();
+        String stringResult = emailValidation.isEmailValidation(email).getStringValidation();
+        assertTrue("ต้องไม่ผ่าน", result);
+        assertEquals("Email is not pattern", stringResult);
+    }
+
 }
