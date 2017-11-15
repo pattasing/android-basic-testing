@@ -2,6 +2,8 @@ package cc.somkiat.basicunittesting;
 
 import org.junit.Test;
 
+import cc.somkiat.basicunittesting.Controller.EmailValidation;
+
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 

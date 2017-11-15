@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import cc.somkiat.basicunittesting.Controller.EmailValidation;
+import cc.somkiat.basicunittesting.Controller.NameValidation;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText editName;

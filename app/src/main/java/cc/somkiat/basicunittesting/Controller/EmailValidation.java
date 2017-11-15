@@ -1,7 +1,6 @@
-package cc.somkiat.basicunittesting;
+package cc.somkiat.basicunittesting.Controller;
 
-import android.content.Context;
-
+import cc.somkiat.basicunittesting.Model.Result;
 import cc.somkiat.basicunittesting.TestException.EmailIsNotPattern;
 import cc.somkiat.basicunittesting.TestException.IsTextEmptyException;
 import cc.somkiat.basicunittesting.TestException.IsTextNullException;

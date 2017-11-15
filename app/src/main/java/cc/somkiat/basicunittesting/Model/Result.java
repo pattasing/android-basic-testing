@@ -1,4 +1,4 @@
-package cc.somkiat.basicunittesting;
+package cc.somkiat.basicunittesting.Model;
 
 public class Result {
     private boolean validation;
